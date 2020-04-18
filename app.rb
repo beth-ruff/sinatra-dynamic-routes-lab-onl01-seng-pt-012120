@@ -7,8 +7,8 @@ class App < Sinatra::Base
   end
   
   get "/square/:number" do 
-    @number = params[:number] ** 2 
-    erb :squarenumber
+    @number = params[:number].to_i 
+    "#{@num ** 2}.to_s"  
   end 
   
   get "/say/:number/:phrase" do
